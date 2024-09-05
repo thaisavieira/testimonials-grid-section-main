@@ -5,15 +5,18 @@
 }
 
 :root{
-    --primary-accent-color-bg-student-container-1:hsl(263, 55%, 52%);
-    --primary-accent-color-bg-student-container-2: hsl(217, 19%, 35%);
-    --primary-accent-color-bg-student-container-3: hsl(219, 29%, 14%);
-    --primary-accent-color-bg-student-container-4: hsl(0, 0%, 100%);
-    --neutral-font-color:hsl(0, 0%, 81%);
-    --neutral-main-bg:hsl(210, 46%, 95%);
+    --violet:hsl(263, 55%, 52%);
+    --dark-grayish-blue: hsl(217, 19%, 35%);
+    --dark-blackish-blue: hsl(219, 29%, 14%);
+    --white: hsl(0, 0%, 100%);
+    --light-gray:hsl(0, 0%, 81%);
+    --light-grayish-blue:hsl(210, 46%, 95%);
     --ff-primary: "Barlow Semi Condensed", sans-serif;
+    --fs-large:2rem;
     --fs-medium:1.6rem;
     --fs-small:1.3rem;
+    --fw-700:700;
+    --fw-600:600;
     --fw-500:500;
     --fw-400:400;
 }
@@ -26,8 +29,10 @@ body{
     font-family:var(--ff-primary);
     font-size: var(--fs-medium);
     font-weight: var(--fw-400);
-    background-color: var(--neutral-main-bg);
-
+    background-color: var(--light-grayish-blue);
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
 }
 
 /* more responsive img*/
@@ -35,12 +40,6 @@ img{
     max-width: 100%;
     display: block;
 }
-
-.testimonial-container{
-    display: flex;
-    flex-direction: column;
-}
-
 
 .testimonial{
     padding: 3.2rem;
@@ -51,20 +50,24 @@ img{
 
 h2, h3{
     font-size: var(--fs-small);
-    font-weight: var(--fw-500);
+}
+
+h2{
+    font-weight: var(--fw-700);
 }
 
 h3{
+    font-weight: var(--fw-500);
     opacity: 0.5;
 }
 
 h1{
-    font-size: 2rem;
-    font-weight: 600;
+    font-size: var(--fs-large);
+    font-weight: var(--fw-600);
     line-height: 2.4rem;
     padding-bottom: 1.6rem;
+    margin: 1rem 0.8rem;
 }
-
 
 .student-profile{
     display: flex;
@@ -75,25 +78,51 @@ h1{
 .student-profile > img{
     border-radius: 50%;
     height: 2.8rem;
+    border: 0.1rem solid var(--dark-grayish-blue);
+}
+
+.testimonial-content{
+    opacity: 70%;
 }
 
 .student-1{
-    background-color: var(--primary-accent-color-bg-student-container-1);
+    background-color: var(--violet);
+    color: var(--white);
 }
 
-.student-profile > p{
-    color:var(--neutral-font-color);
-    opacity: 50%;
+.student-2{
+    background-color: var(--dark-grayish-blue);
+    color:var(--white);
 }
 
-@media(min-width:700px){
+.student-3{
+    background-color: var(--white);
+    color: var(-dark-blackish-blue);
+}
+
+.student-4{
+    background-color: var(--dark-blackish-blue);
+    color: var(--white);
+}
+
+.student-5{
+    background-color: var(--white);
+    color: var(--dark-blackish-blue);
+}
+
+@media screen and (min-width:70rem){
+
+    main{
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        height: 100vh;
+    }
+
     .testimonial-container{
         display: grid;
-        gap: 1.25rem;
-        place-items: center;
-        min-height: 100dvh;
         grid-template-columns: repeat(auto-fit, minmax(300px,auto));
-        grid-template-rows:  1fr 1fr;
+        grid-template-rows: auto auto;
     }
 
     .student-1{
