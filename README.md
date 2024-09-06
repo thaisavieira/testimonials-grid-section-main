@@ -21,12 +21,13 @@ To do this challenge was recommend basic understanding of HTML and CSS, especial
 
 ✅ Users should be able to view the optimal layout for the site depending on their device's screen size.
 
-### Screenshot
+### Screenshots
 
-Mobile version:
+- Mobile version:
+
 ![393x1975](./screenshots/iPhone-14-Pro-393x1975.png)
 
-Desktop version:
+- Desktop version:
 ![1559x988](./screenshots/Macbook-Air-1559x988.png)
 
 ### Links
